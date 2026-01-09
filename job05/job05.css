@@ -1,0 +1,13 @@
+body {
+    height : 4096px;
+    scroll-behavior : smooth;
+}
+
+footer {
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    /* background-color: lightsalmon; voir le footer*/
+    bottom: 0;
+}
+
