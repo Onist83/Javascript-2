@@ -22,3 +22,14 @@ window.addEventListener("scroll", function() {
 
 //0%=0 25%=1024 50%=2048 75%=3072 100%=4096
 //Color 0%=0 25%=90 50%=180 75%=270 100%=360
+
+
+
+// CORRECTION
+
+// const footer = document.querySelector('footer')
+
+// window.addEventListener('scroll', function(){
+//     console.log(this.window.scrollyY)
+//     footer.style.backgroundColor = "hsl(" + (this.window.scrollY / 11) + ",100%, 50%)"
+// })
