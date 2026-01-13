@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="form" onsubmit="return false;"> // Empêche le rechargement de la page ou mettre action=""
+            <label for="input">Entrer l'id :</label>
+            <input type="text" id="input" name="input" placeholder="Tapez l'id du Pokemon ici">
+            
+            <label for="input2">Entrer le nom :</label>
+            <input type="text" id="input2" name="input2" placeholder="Tapez le nom du Pokemon ici">
+            
+            <select id="type" name="type">
+                <option value="">Choisir un type</option>
+                <option value="normal">Normal</option>
+                <option value="fire">Feu</option>
+                <option value="water">Eau</option>
+                <option value="electric">Électrique</option>
+                <option value="grass">Plante</option>
+                <option value="ice">Glace</option>
+                <option value="fighting">Combat</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Sol</option>
+                <option value="flying">Vol</option>
+                <option value="psychic">Psy</option>
+                <option value="bug">Insecte</option>
+                <option value="rock">Roche</option>
+                <option value="ghost">Spectre</option>
+                <option value="dragon">Dragon</option>
+                <option value="dark">Ténèbres</option>
+                <option value="steel">Acier</option>
+                <option value="fairy">Fée</option>
+            </select>
+
+        <div><button type="submit" id="submit">Filtrer</button></div>        
+    </form>
+</div>
+
+
+<script src="job03.js" defer></script>
+</body>
+</html>
