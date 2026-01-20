@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kanban Tasks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="autre.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <h1 class="title">USER STORIES</h1>
+</header>
+
+<main class="kanban">
+
+    <!-- TODO -->
+    <section data-status="todo">
+        <div class="section-header">
+            <h3>🟢 To Do</h3>
+            <button class="btn add-task-btn btn-todo"
+                    data-status="todo"
+                    data-bs-toggle="modal"
+                    data-bs-target="#taskModal">➕</button>
+        </div>
+        <div class="list"></div>
+    </section>
+
+    <!-- IN PROGRESS -->
+    <section data-status="inprogress">
+        <div class="section-header">
+            <h3>🟡 In Progress</h3>
+            <button class="btn add-task-btn btn-progress"
+                    data-status="inprogress"
+                    data-bs-toggle="modal"
+                    data-bs-target="#taskModal">➕</button>
+        </div>
+        <div class="list"></div>
+    </section>
+
+</main>
+
+<!-- MODAL -->
+<div class="modal fade" id="taskModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Task</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="taskForm">
+                    <input type="hidden" id="taskId">
+
+                    <label>Titre</label>
+                    <input id="taskTitle" class="form-control" required>
+
+                    <label class="mt-2">Description</label>
+                    <textarea id="taskDesc" class="form-control" rows="3" required></textarea>
+
+                    <label class="mt-2">Priorité</label>
+                    <select id="taskPriority" class="form-select">
+                        <option value="low">🟢 Low</option>
+                        <option value="medium">🟡 Medium</option>
+                        <option value="high">🔴 High</option>
+                    </select>
+
+                    <label class="mt-2">Date</label>
+                    <input type="date" id="taskDate" class="form-control">
+
+                    <label class="mt-2">Statut</label>
+                    <select id="taskStatus" class="form-select" disabled>
+                        <option value="todo">To Do</option>
+                        <option value="inprogress">In Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button id="saveTask" class="btn btn-primary">Save</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="autre.js" defer></script>
+</body>
+</html>

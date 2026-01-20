@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userstories.css">
+    <title>Document</title>
+</head>
+<body>
+
+<button id="openDialogButton" class="openDialogButton" >Create a Task</button>
+    <dialog id="createTaskDialog" class="createTaskDialog" >
+
+        <form id="formulaire" method="dialog">
+        <label for input="">Entrer le Titre : </label>
+        <input type="text" id="input" name="input" placeholder="Tapez votre Titre ici" required>
+        <label for input="">Priorité du projet : </label>
+        <select id="type" name="type" required>
+                <option value="">Choisir priorité du projet : </option>
+                <option value="low">🟢Low</option>
+                <option value="medium">🟡Medium</option>
+                <option value="high">🔴High</option>
+        </select>
+        <label for input="">Statut du projet : </label>
+        <select id="type3" name="type3" required>
+                <option value="">Choisir statut du projet : </option>
+                <option value="aFaire">To Do</option>
+                <option value="enCours">Progressing</option>
+                <option value="acheve">Done</option>
+        </select>
+        <label for input="">Choisir date limite : </label>
+        <input type="date" name="dateLimite" placeholder="Tapez votre date limite ici aaaa-mm-jj" required>
+        <br>
+        <label for="description">Description de la tâche :</label>
+        <textarea id="type4" name="type4" rows="5" cols="33" placeholder="Décrire la tâche à accomplir ici..." required></textarea>
+        <br>
+        <button type="button" class="buttonPrimary">Save changes</button>
+        </form>
+        <button type="button" class="buttonSecondary">Close</button>
+        </dialog>
+
+        <button class="open-dialog">Open dialog</button>
+        <dialog class="example-dialog">
+  <form method="dialog">
+    <button>Fermer via method="dialog"</button>
+  </form>
+</dialog>
+
+<script src="userstories.js" defer></script>
+</body>
+</html>
